@@ -1,0 +1,252 @@
+@font-face {
+    font-family: FreightBigProLight;
+    src: url(../fonts/FreightBigPro-Light.ttf);
+}
+@font-face {
+    font-family: FreightBigProBook;
+    src: url(../fonts/FreightBigPro-Book.ttf);
+}
+
+
+/* icon font */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?v3qo27');
+  src:  url('../fonts/icomoon.eot?v3qo27#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?v3qo27') format('truetype'),
+    url('../fonts/icomoon.woff?v3qo27') format('woff'),
+    url('../fonts/icomoon.svg?v3qo27#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e904";
+}
+.icon-angel:before {
+  content: "\e900";
+}
+.icon-behance:before {
+  content: "\e901";
+}
+.icon-codepen:before {
+  content: "\e902";
+}
+.icon-dribbble:before {
+  content: "\e903";
+}
+.icon-linkedin:before {
+  content: "\e905";
+}
+.icon-spotify:before {
+  content: "\e906";
+}
+.icon-twitter:before {
+  content: "\e907";
+}
+.icon-youtube:before {
+  content: "\e908";
+}
+/*... icon-font end ..*/
+
+body {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  letter-spacing: .4px;
+}
+
+.description {
+  padding-top: 2rem;
+  font-size: 32px;
+  letter-spacing: .2px;
+  line-height: 1.4;
+  @media screen and (max-width: 40em) {
+    font-size: 1.75rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+  @include breakpoint(large up) {
+    font-weight: 400;
+  }
+
+}
+
+//helper for font weight
+//Open+Sans:400,700,800|Raleway:400,200,700
+.font-light {
+  font-family: FreightBigProLight;
+  // font-weight: 200;
+}
+.font-weight-normal {
+  font-family: FreightBigProBook;
+  // font-weight: 400;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-heavy {
+  font-weight: 800;
+}
+
+.quiet {
+  font-size: 80%;
+}
+
+.title-bar {
+  a {
+    font-size: 14px;
+    font-family: "Helvetica Neue";
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  box-shadow: none;
+  padding: 2rem;
+  @media screen and (max-width: 40em) {
+    padding: 1rem 2rem 0;
+  }
+
+  .title-bar-right {
+    flex: 2 1 0px;
+  }
+
+  .title-bar-title {
+    font-weight: 800;
+  }
+}
+
+.image-container {
+  padding-left: 2rem;
+  @media screen and (max-width: 40em) {
+    margin-top: 2rem;
+  }
+}
+
+.pointers-section {
+  margin-top: 5rem;
+  ul {
+    margin: 1rem 0 0;
+    @media screen and (max-width: 40em) {
+      margin: .75rem 0 0;
+    }
+    padding: 0;
+    li {
+      font-size: 18px;
+      margin-bottom: .25rem;
+      letter-spacing: .05em;
+    }
+  }
+  .pointers-section-1 {
+    @media screen and (max-width: 40em) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.subheading {
+  font-family: "Helvetica Neue";
+  letter-spacing: .6px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.section {
+  margin-bottom: 6rem;
+}
+
+.blog-title {
+  font-size: 2rem;
+  letter-spacing: .4px;
+  @media screen and (max-width: 40em) {
+    font-size: 1.5rem;
+  }
+}
+
+.blog-list {
+  margin-bottom: 1.5rem;
+}
+
+.site-footer {
+  margin-top: 8rem;
+  @media screen and (max-width: 40em) {
+    margin-top: 6rem;
+  }
+  padding: 4rem 0 4rem;
+  background: #f1f3f5;
+  a {
+    font-size: 28px;
+    @media screen and (max-width: 40em) {
+      font-size: 1.625rem;
+    }
+    padding: .75rem .75rem;
+  }
+}
+
+.footer-desc {
+  padding: 1rem 0;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 300;
+  a {
+    font-size: 20px;
+    padding: 0;
+
+  }
+  @media screen and (max-width: 40em) {
+    font-size: 16px;
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.post-content {
+  font-size: 1.25rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+
+}
+
+.mb-1 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 40em) {
+  .blog-section {
+    margin-bottom: 5rem;
+  }
+  .content-container {
+    margin-top: 2rem;
+  }
+}

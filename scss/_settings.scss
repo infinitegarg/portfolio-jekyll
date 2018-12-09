@@ -65,9 +65,9 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
+$global-font-size: 18px;
+$global-width: rem-calc(900);
+$global-lineheight: 1.6;
 $foundation-palette: (
   primary: #5c7362,
   secondary: #aad4b4,
@@ -82,7 +82,7 @@ $black: #343A40;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: "FreightBigProBook","Helvetica Neue",Helvetica,Arial,sans-serif;
+$body-font-family: 'Lora',"Helvetica Neue",Helvetica,Arial,serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -129,7 +129,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "Raleway","Helvetica Neue",Helvetica,sans-serif;
+$header-font-family: "Lota","Helvetica Neue",Helvetica,serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -157,7 +157,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.75;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -175,7 +175,7 @@ $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(12) auto rem-calc(16);
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
-$list-style-type: none;
+$list-style-type: disc;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
@@ -198,8 +198,8 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
-$lead-lineheight: 1.6;
+$lead-font-size: $global-font-size;
+$lead-lineheight: 1.75;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;
@@ -599,7 +599,7 @@ $prototype-display: (
 // --------------------------
 
 $prototype-font-breakpoints: $global-prototype-breakpoints;
-$prototype-wide-letter-spacing: rem-calc(4);
+$prototype-wide-letter-spacing: rem-calc(-1);
 $prototype-font-normal: $global-weight-normal;
 $prototype-font-bold: $global-weight-bold;
 

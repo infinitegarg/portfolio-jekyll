@@ -1,0 +1,135 @@
+---
+layout: playground-post
+title:  "Fill Text - CSS Clipping"
+date:   2018-10-05 18:49:31 +0530
+categories: test
+playground: true
+description: "A plugin to re-label the button while maintaing the design system principles"
+tag: "sketch"
+image-url: "images/fill-text.gif"
+---
+
+<div class="grid-x align-center">
+  <div class="cell small-10 medium-10 post-content">
+    <div class="post-title">{{ page.title }}</div>
+
+    <div class="container-effect">
+    	<div data-sample="Fill_Text" class="fill-text">
+    	</div>
+    </div>
+    <br><br>
+
+     <p>Let the <a href="https://github.com/infinitegarg/fillText.js"> JavaScript plugin</a> do the work for you or get into the CSS playground <a href="#tutorial">here</a><br>P.S. It is a <strong> pure CSS effect. </strong></p>
+
+       <h2 class="section-heading" id="installation">Installation  <a href="#installation" class="link"><span class="icon-link"></a></h2>
+   				<pre>
+&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;fillText.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+ $(function(){
+     $(&quot;.fill-text&quot;).fillText({
+       color: &quot;black&quot;,
+       text_bg: &quot;#ccc&quot;,
+       duration: &quot;2s&quot;,
+     });
+ });
+&lt;/script&gt;
+...
+
+&lt;div <strong>data-sample=&quot;Fill_Text&quot;</strong> class=&quot;element&quot;&gt;&lt;/div&gt;</pre>
+
+ 				<br>
+ 				<h2 class="section-heading" id="options">Options <a href="#options" class="link"><span class="icon-link"></a></h2>
+ 				<p>With default values:</p>
+ 				<pre>
+color : &quot;#ccc&quot;,
+text_bg : &quot;black&quot;,
+fill_value : 7,
+duration : &quot;2s&quot;</pre>
+        <br>
+
+
+       <h2 class="section-heading" id="tutorial">CSS Playground <a class="link" href="#tutorial"><span class="icon-link"></a></h2>
+       <p><span class="code">-webkit-background-clip</span> is a powerful css property still under experiments. I was going through various usecases when this effect struck me. It can be used as a light-weight css-only loader, a cool text effect or in my case to show skillset efficiency.<br>
+Let's start with the basic HTML structure required.
+       </p>
+       <p class="well">Attention: Some of the techniques we’ll be using are experimental and might not work in older browsers.</p>
+       <br>
+
+
+       <h2 class="section-heading" id="markup">The Markup <a class="link" href="#markup"><span class="icon-link"></a></h2>
+       <p> We'll be using <span class="code">data-attribute</span> to provide dynamic value of the content to the CSS selectors.</p>
+       <pre>
+&lt;div data-sample=&quot;Fill_Text&quot; class=&quot;fill-text&quot;&gt;&lt;/div&gt;</pre>
+       <br>
+
+
+       <h2 class="section-heading" id="css">The CSS <a href="#css" class="link"><span class="icon-link"></a></h2>
+       <p>We will be creating two layers, one containing the base color of the text and other to achieve the fill effect.
+        <br>
+       Let's give the basic styling to the text.
+       <br>
+           <pre>.fill-text {
+  font-size:4.5em;        /* set accordingly */
+  font-weight:700;
+  position:relative;      /* this is important to give scope to the ::after content */
+  display:inline-block;   /* this will confine the width of the content */
+  color:#ccc;             /* base text color */
+}</pre>
+       <br>
+
+       <figure>
+       <img src="images/fill-text-illustration.png">
+           <figcaption>Clipping the background to text</figcaption>
+       </figure>
+       <p>The <span class="code">::before</span> will contain the base color text layer. <br><span class="code">attr(data-sample)</span> will fetch the content of the data-attribute used in the HTML markup. This way, our text will stay dynamic in CSS.</p>
+       <pre>
+.fill-text::before {
+  content:attr(data-sample);
+}</pre>
+       <br>
+       <p>The <span class="code">::after</span> is where the top layer will reside. Set the background color to the desired fill color and  <span class="code">-webkit-background-clip:text</span> will clip the background to take the shape of text. The width of the background will give the value to the effect.
+           <br><br>Note: <span class="code">-webkit-text-fill-color:transparent</span> is important to clear the fill color of the text and make it transparent for the background to fill.</p>
+
+       <pre>
+.fill-text::after {
+  content:attr(data-sample);  /* get content from HTML */
+  position:absolute;          /* to overlap the base text */
+  top:0;
+  left:0;
+  width:60%;            /* this sets the width of the fill color */
+  background:black;       /* Set the color to desired fill color */
+  height:100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}</pre>
+       <br>
+       <p>Now, lets give life to the effect</p>
+
+       <h2 class="section-heading" id="animation">The animation  <a href="#animation" class="link"><span class="icon-link"></a></h2>
+       <p>I hope you'll agree motion does more work than static content. For the basics, we will simply change the width of the background from 0 to 60% . However, a variety of animations can be added.</p>
+
+       <pre>
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width:60%;
+}</pre>
+      <br>
+       <p>Now add the animation <span class="code">fill</span> to the original <span class="code">::after</span></p>
+       <pre>
+.fill-text::after {
+  animation-name:fill;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;      /* this will reverse the direction after one loop */
+}</pre>
+       <br>
+       <p>That's it from my side! Now its your time to make the internet awesome  😎 </p>
+
+
+</div>
+</div>

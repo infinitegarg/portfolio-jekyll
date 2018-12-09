@@ -1,83 +1,47 @@
-@font-face {
-    font-family: FreightBigProLight;
-    src: url(../fonts/FreightBigPro-Light.ttf);
-}
-@font-face {
-    font-family: FreightBigProBook;
-    src: url(../fonts/FreightBigPro-Book.ttf);
-}
+// @font-face {
+//     font-family: 'Lora', serif;;
+//     src: url(../fonts/FreightBigPro-Light.ttf);
+// }
+// @font-face {
+//     font-family: FreightBigProBook;
+//     src: url(../fonts/FreightBigPro-Book.ttf);
+// }
 
 
-/* icon font */
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?v3qo27');
-  src:  url('../fonts/icomoon.eot?v3qo27#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?v3qo27') format('truetype'),
-    url('../fonts/icomoon.woff?v3qo27') format('woff'),
-    url('../fonts/icomoon.svg?v3qo27#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-github:before {
-  content: "\e904";
-}
-.icon-angel:before {
-  content: "\e900";
-}
-.icon-behance:before {
-  content: "\e901";
-}
-.icon-codepen:before {
-  content: "\e902";
-}
-.icon-dribbble:before {
-  content: "\e903";
-}
-.icon-linkedin:before {
-  content: "\e905";
-}
-.icon-spotify:before {
-  content: "\e906";
-}
-.icon-twitter:before {
-  content: "\e907";
-}
-.icon-youtube:before {
-  content: "\e908";
-}
-/*... icon-font end ..*/
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:400,500');
 
 body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: grayscale;
-  letter-spacing: .4px;
+  letter-spacing: -.006em;
+}
+
+p,li {
+  font-size: 17px;
+}
+
+p{
+	&.mb-2 {
+		margin-bottom: .2rem;
+	}
+}
+
+p+p {
+  margin-top: 16px;
 }
 
 .description {
-  padding-top: 2rem;
-  font-size: 32px;
-  letter-spacing: .2px;
-  line-height: 1.4;
+	padding-top: 1.5rem;
+  font-size: 24px;
+  letter-spacing: -.2px;
+  line-height: 1.6;
   @media screen and (max-width: 40em) {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
+}
+
+.sub-description {
+	font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,12 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 //helper for font weight
 //Open+Sans:400,700,800|Raleway:400,200,700
 .font-light {
-  font-family: FreightBigProLight;
+  font-family: 'Lora', serif;
   // font-weight: 200;
 }
-.font-weight-normal {
-  font-family: FreightBigProBook;
-  // font-weight: 400;
+.font-weight-semibold {
+  // font-family: FreightBigProBook;
+  font-weight: 700;
 }
 .font-bold {
   font-weight: 700;
@@ -133,6 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .image-container {
+	margin-top: 2rem;
   padding-left: 2rem;
   @media screen and (max-width: 40em) {
     margin-top: 2rem;
@@ -140,15 +105,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pointers-section {
-  margin-top: 5rem;
+  margin-top: 3rem;
   ul {
-    margin: 1rem 0 0;
+    margin: .8rem 0 0;
     @media screen and (max-width: 40em) {
       margin: .75rem 0 0;
     }
     padding: 0;
     li {
-      font-size: 18px;
+      font-size: 15px;
       margin-bottom: .25rem;
       letter-spacing: .05em;
     }
@@ -161,8 +126,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subheading {
-  font-family: "Helvetica Neue";
-  letter-spacing: .6px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+
 }
 
 .uppercase {
@@ -174,15 +140,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-title {
-  font-size: 2rem;
-  letter-spacing: .4px;
+  font-size: 20px;
+  line-height: 1.75rem;
+  letter-spacing: -.008em;
+	font-weight: 700;
+  margin-bottom: .25rem;
   @media screen and (max-width: 40em) {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
-.blog-list {
-  margin-bottom: 1.5rem;
+.blog-desc {
+  // line-height: 1.4;
+	font-size: 16px;
+}
+
+.blog-image {
+  // background: #f1f3f5;
+  // height: 160px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid #f1f3f5;
+
+  img {
+		width: 100%;
+    -ms-flex: 1;
+    object-fit: cover;
+    height: 160px;
+  }
+}
+
+.blog-title-listing-page {
+  @media screen and (min-width: 40em) {
+    padding-left: 1rem;
+  }
 }
 
 .site-footer {
@@ -224,13 +219,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-content {
-  font-size: 1.25rem;
+  font-size: 20px;
+  // font-family: FreightBigProBook !important;
+  font-family: 'Lora', serif !important;
 }
 
 .post-title {
-  font-size: 2.5rem;
-  margin-bottom: .5rem;
-
+	font-size: 1.8rem;
+	margin-bottom: .5rem;
+	line-height: 1.4;
 }
 
 .mb-1 {
@@ -242,11 +239,108 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.blog-section-listing {
+  margin-bottom: 2rem;
+
+  .blog-image {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 40em) {
   .blog-section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .content-container {
     margin-top: 2rem;
   }
+}
+
+.blog-section:nth-child(3).blog-section-listing {
+  margin-top: 2rem;
+}
+
+.homepage-section {
+  margin-bottom: 6rem;
+  @media screen and (max-width: 40em) {
+    margin-bottom: 4rem;
+  }
+}
+
+
+.section-heading {
+  margin-top: 32px;
+  letter-spacing: 0;
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-heading-1 {
+	margin-top: 16px;
+	letter-spacing: 0;
+	font-size: 18px;
+	margin-bottom: 4px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+}
+
+.section-heading-l {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+figure {
+	width: 140%;
+	margin-left: -20% !important;
+
+	&.small {
+		width: 80%;
+		margin-left: 10% !important;
+	}
+
+	&.inline {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+}
+
+
+.dots {
+	text-align: center;
+	padding: 8px 0;
+}
+
+.dots:after{
+	content: '« «   » » '; //■ ■ ■
+    letter-spacing: 8px;
+    font-size: 12px;
+
+}
+
+.grid-container-large {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul.no-style {
+	margin-left: 0;
+	li {
+		list-style: none;
+	}
+}
+
+
+figcaption {
+	font-size: .6em !important;
+	font-family: "Roboto", sans-serif;
+	color: $dark-gray !important;
+	font-style: normal !important;
 }

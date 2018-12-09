@@ -3,7 +3,7 @@ layout: blog-post
 title:  "Designing for Datalake"
 date:   2018-10-02 18:49:31 +0530
 categories: blog
-blog: blog
+blog: true
 description: "TLDR: Understand what the data is, what it’s for, who’s going to use it and how!"
 tag: "Case Study"
 ---

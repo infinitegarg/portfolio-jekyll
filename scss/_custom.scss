@@ -297,17 +297,23 @@ strong {
 }
 
 figure {
-	width: 140%;
-	margin-left: -20% !important;
+	width: 100%;
+	@media screen and (min-width: 40em){
+		width: 140%;
+		margin-left: -20% !important;
+		&.small {
+			width: 80%;
+			margin-left: 10% !important;
+		}
 
-	&.small {
-		width: 80%;
-		margin-left: 10% !important;
-	}
-
-	&.inline {
-		margin-top: 32px;
-		margin-bottom: 32px;
+		&.inline {
+			margin-top: 32px;
+			margin-bottom: 32px;
+		}
+		&.large {
+			width: 180%;
+			margin-left: -40% !important;
+		}
 	}
 }
 
@@ -339,7 +345,7 @@ ul.no-style {
 
 
 figcaption {
-	font-size: .6em !important;
+	font-size: .7em !important;
 	font-family: "Roboto", sans-serif;
 	color: $dark-gray !important;
 	font-style: normal !important;

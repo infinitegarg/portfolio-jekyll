@@ -1,0 +1,168 @@
+---
+layout: blog-post
+title:  "UX Case Study - Inhouse Network"
+date:   2018-10-02 18:49:31 +0530
+categories: blog
+blog: true
+description: "How I worked as a Product Designer, Fullstack Developer, Motion Graphics Designer and Product Manager"
+tag: "Case Study"
+image-url: "images/inhouse-network-cover.png"
+---
+
+<div class="grid-x align-center">
+  <div class="cell small-10 medium-10 post-content">
+    <div class="post-title">{{ page.title }}</div>
+
+    <figure class="large">
+    <!-- <img src="images/inhouse-network-cover.png"> -->
+    <!-- <figcaption>Results from the interviews</figcaption> -->
+    </figure>
+
+    <div class="section-heading">Backstory</div>
+    <p>I am always interested in attending hackathons, meetups, conferences etc. as they provide a lot of exposure and I get to see what the awesome people in the community are doing.
+      <br>
+      Hackathons are my favourite among them as they are very fast paced and the excitement of delivering a minimal product or POC in a time constraint is a different feeling altogether. Apart from hours of designing, prototyping and coding, the best thing about them are the wonderful people who despite being in a competitive state are ready to help you out.
+      <br>
+      But then again, you don’t know who to reach out to for a specific skillset (say reactjs) in a swarm of people unless you’re a hyperactive social guy who talks to everyone in a short span of time. This inspired me to create a network of people in one of the hackathons conducted by the startup I’m currently working it.
+    </p>
+<!--
+    <div class="dots"></div>
+    <br> -->
+    <div class="section-heading">Problem</div>
+    <p>People attending an event find it difficult to connect to similar minded people in a short span of time.
+    </p>
+
+    <div class="section-heading">The Challenge</div>
+    <p>Create a functional webapp in 16 hrs, 8 hrs prior to the deadline of a 24 hr hackathon, to give attendees time to connect with each other.
+    </p>
+
+    <div class="section-heading">Team</div>
+    <p>Me, Myself and I -  the designer and developer
+    </p>
+
+    <div class="section-heading">Plan</div>
+    <p>Design a visually appealing interface which attracts users to fill in their information. Also, keep it simple and easy. Given the time constraint I planned on using Google Forms to get user information and fetch data from the Google Sheets to populate on the interface.
+    </p>
+
+    <div class="section-heading">Personas</div>
+    <p>At a broad level, there were 3 user personas.
+    </p>
+
+    <div class="section-heading">Initial Research</div>
+    <figure>
+    <img src="images/inhouse-network.png">
+    <figcaption>Results from the interviews</figcaption>
+    </figure>
+    <p class="mb-2">Before this hackathon, I interviewed a lot of people who actively attends these kinds of events and got to hear things like
+    </p>
+    <ul>
+      <li>“Being an introvert, it is always challenging for me to go to a team’s table and talk about the hack they are working on. You can usually find me sitting on my table for the entire span.”</li>
+      <li>“I don’t know who’s an experienced guy in AngularJS whom I can talk to for help”</li>
+    </ul>
+
+    <p>Also, it was quite challenging for Hiring Managers at our startup to reach out to potential candidates given the large number.
+      <br>People are never keen on filling survey forms until they get value from it. Thus a visual representation was required where they can get haptic feedback to their responses.
+      <a href="https://medium.com/coffee-and-junk/design-psychology-aesthetic-usability-effect-494ed0f22571" target="_blank">(The Aesthetic Usability effect)</a>
+    </p>
+
+    <div class="section-heading">Finding the right connection</div>
+    <p>There are many factors as to which people might want to connect with others. These can be education institution, skill expertise, skill interests, organization etc.
+      <br>For this hackathon, the most suitable was skill since most attendees were developers looking for learning or job opportunities.
+    </p>
+
+    <div class="section-heading">Data Visualization</div>
+    <p class="mb-2">It started with a basic sketch on paper where I divided the app into 3 components.
+    </p>
+    <ul>
+      <li>Skill user aspires</li>
+      <li>Skill user masters</li>
+      <li>User Profile</li>
+    </ul>
+
+    <p>which were to make the entire network. I had envisioned the network to be somewhat like stars connected to each other by an imaginary line in the universe (like the visual representation of constellations).
+    </p>
+    <figure>
+    <img src="images/inhouse-network-sketches.jpg">
+    <figcaption>Initial Draft</figcaption>
+    </figure>
+
+    <p>I wanted to use d3 library to make the network but it renders static elements. On further researching, D3 force came to my rescue.
+      <br>
+      D3’s force layout uses a physics based simulator for positioning visual elements and these forces can be set up between elements.
+      <br>
+      Using d3 force directed graph, i tried to experiment with sample data and it was captivating.
+    </p>
+
+    <p class="mb-2">Though it was looking good but it lacked insights. For example
+    </p>
+    <ul>
+      <li>Which all elements/users represented the mentors ?</li>
+      <li>Which is the most desired skill ?</li>
+      <li>There was no help guide for the users</li>
+    </ul>
+    <br>
+
+    <figure class="small inline">
+    <img src="images/inhouse-network-guide.png">
+    <!-- <figcaption>Guide</figcaption> -->
+    </figure>
+
+    <br>
+    <p class="mb-2">To incorporate these, I added a help guide for the following insights
+    </p>
+    <ul>
+      <li>Size of bubble - No. of connections to a skill</li>
+      <li>Color of bubble - Attendee or Mentor</li>
+    </ul>
+
+    <div class="section-heading">Setting up the backend</div>
+
+    <p class="mb-2">Now with visualization done, I needed to get the data from the users. Given the limited time, I chose our favourite Google Forms. For the POC purpose I needed only these data points
+    </p>
+
+    <ul>
+      <li>User Profile</li>
+      <li>Skill aspiring to learn</li>
+      <li>Skill expert at</li>
+      <li>Location (the table at which the user is sitting)</li>
+    </ul>
+
+    <p>Next, I fetched the data from the Google Sheets using the api, manipulated the format to allow d3 to render the graph.
+    </p>
+
+    <div class="section-heading">And it was set free</div>
+    <p>After setting up on github and initial testing, it was sent to all the attendees and in no time I could see the entire network growing. Thank God, it was still 4 hours to go for the deadline ! Phew !
+      <br>I was very happy with the results and the entire process was an exhaustive but great experience.
+    </p>
+
+    <div class="section-heading">Key Findings</div>
+    <ul>
+      <li>People are really interested in finding themselves on the graph once they fill the form </li>
+      <li>Machine Learning and AI : the most aspired skills. (Looks like Elon Musk must be happy)</li>
+      <li>More set of features requested like social network integration, geolocation, chat feature, filters on the basis of skills</li>
+      <li>Playful visualization had people sticked to it.</li>
+    </ul>
+
+
+    <div class="section-heading">Future Scope</div>
+    <ul>
+      <li>Large Scale Implementation including regions or large organizations. </li>
+      <li>Interactive Data Visualization for different kinds of data.</li>
+      <li>Searching and Filtering capabilities.</li>
+      <li>Complete Profile of users.</li>
+      <li>Mobile app to find someone near you with a particular skillset using the gps location.</li>
+    </ul>
+
+    <br>
+    <p>You can try the live version <a href="https://infinitegarg.github.io/inhouse-network/" target="_blank">here</a></p>
+
+
+
+
+
+
+
+
+  </div>
+
+</div>

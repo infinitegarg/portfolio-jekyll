@@ -69,7 +69,7 @@ $global-font-size: 18px;
 $global-width: rem-calc(900);
 $global-lineheight: 1.6;
 $foundation-palette: (
-  primary: #5c7362,
+  primary: #2b2b2b,
   secondary: #aad4b4,
   success: #3adb76,
   warning: #ffae00,
@@ -77,12 +77,12 @@ $foundation-palette: (
 );
 $light-gray: #e6e6e6;
 $medium-gray: #e7e4e4;
-$dark-gray: #8a8a8a;
-$black: #343A40;
+$dark-gray: #767676;
+$black: #2b2b2b;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Lora',"Helvetica Neue",Helvetica,Arial,serif;
+$body-font-family: 'Montserrat',"Helvetica Neue",Helvetica,Arial,sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -167,7 +167,8 @@ $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color-hover: $primary-color;
+// $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -858,7 +859,7 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   small: 20px,
-  medium: 30px
+  medium: 48px
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $block-grid-max: 8;

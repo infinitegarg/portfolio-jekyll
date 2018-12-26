@@ -1,10 +1,15 @@
 ---
 layout: playground-post
-title:  "iOS inspired Shadow"
-date:   2018-10-05 18:49:31 +0530
-categories: test
+title:  "iOS inspired shadow"
+date:   2018-10-02 18:49:31 +0530
+categories: blog
 playground: true
-description: "iOS 11 introduced beautiful drop-shadows. I tried to recreate them for the web."
-tag: "css"
+description: "A plugin to re-label the button while maintaing the design system principles"
+tag: "Case Study"
+image-url: "images/ios-shadow.png"
 ---
-This is a test post
+
+
+<div class="cover-art">
+  <img src="images/ios-shadow.png">
+</div>

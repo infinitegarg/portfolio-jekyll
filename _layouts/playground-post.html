@@ -61,41 +61,44 @@
 
     <div class="grid-container content-container">
       <div class="grid-x align-center">
-        <div class="cell small-10 medium-10 subheading uppercase">
-          <a href="playground">Playground /</a>
+        <div class="cell small-10 medium-10 subheading uppercase breadcrumb">
+          <a href="playground">&lt; Playground</a>
         </div>
       </div>
 
       {{ content }}
 
     </div>
-    <div class="grid-container fluid">
-
-      <div class="page-navigation grid-x grid-padding-x">
-        {% if page.previous.url %}
-          {% if page.previous.playground %}
-            <div>Playground</div>
-            <a class="prev" href="{{page.previous.url}}"> < {{ page.previous.title }} </a>
-          {% else %}
-            <div>Blog</div>
-            <a class="prev" href="{{page.previous.url}}"> < {{ page.previous.title }} </a>
-          {% endif %}
-        {% endif %}
-
-        {% if page.next.url %}
-          {% if page.next.playground %}
-            <div>Playground</div>
-            <a class="prev" href="{{page.next.url}}"> > {{ page.next.title }} </a>
-          {% else %}
-            <div>Blog</div>
-            <a class="prev" href="{{page.next.url}}"> > {{ page.next.title }} </a>
-          {% endif %}
-        {% endif %}
-
+    <div class="grid-container large">
+      <div class="page-navigation-header"> Up Next </div>
+      <div class="page-navigation grid-x grid-margin-x align-justify">
+            {% if page.previous.url %}
+            <a class="small-12 medium-6 cell blog-section" href="{{ page.previous.url }}">
+              <div class="blog-image small-12 medium-4">
+                <img src="{{ page.previous.image-url }}"> </div>
+              <div class="blog-heading">
+                <div class="blog-title">{{ page.previous.title }}<span class="inline-small-text">{{ page.previous.time }}</span></div>
+                <div class="blog-desc">{{ page.previous.description}}</div>
+                <div class="category">{{ page.previous.categories}}</div>
+              </div>
+            </a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="small-12 medium-6 cell blog-section" href="{{ page.next.url }}">
+              <div class="blog-image small-12 medium-4">
+                <img src="{{ page.next.image-url }}"> </div>
+              <div class="blog-heading">
+                <div class="blog-title">{{ page.next.title }}<span class="inline-small-text">{{ page.next.time }}</span></div>
+                <div class="blog-desc">{{ page.next.description}}</div>
+                <div class="category">{{ page.next.categories}}</div>
+              </div>
+            </a>
+            {% endif %}
+        </div>
       </div>
-
-      {% include footer.html %}
-    </div><!-- end .grid-container -->
+      <div class="grid-container fluid">
+        {% include footer.html %}
+      </div><!-- end .grid-container -->
 
 
     <!-- Loading JavaScripts

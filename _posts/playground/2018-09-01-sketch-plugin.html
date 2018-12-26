@@ -1,0 +1,50 @@
+---
+layout: playground-post
+title:  "Infinite Button - Sketch Plugin"
+date:   2018-10-02 18:49:31 +0530
+categories: blog
+playground: true
+description: "A plugin to re-label the button while maintaing the design system principles"
+tag: "Case Study"
+image-url: "images/sketch-plugin.png"
+---
+
+<div class="cover-art">
+  <img src="images/sketch-plugin.png">
+</div>
+
+<div class="grid-x align-center">
+  <div class="cell small-10 medium-10 post-content">
+    <div class="post-title">{{ page.title }}</div>
+<br>
+
+    <p>We all know how sketch plugins help make our design process much efficient and faster. There are numerous plugins out there built by the awesome people in the community, out of which I use many. Content Generator is one my favourites.
+      <br>However, I came across a usecase where I couldn’t find a plugin suitable enough. So, I decided to experiment and dived into the development of a sketch plugin. If was pretty deep to be frank. Lack of proper documentation had me reverse engineer various plugins to understand the functions and properties exposed. However, the developer community was very helpful.
+    </p>
+
+    <p class="mb-2">Infinite Button is a plugin that allows you to recreate a group of layers (text and background) as a predefined button. I’m working on the symbol part of it.
+      <br>
+      It takes three inputs
+    </p>
+    <ul>
+      <li>Label - text to appear on the button</li>
+      <li>Type - based on the configuration. We confidered it as per our design system</li>
+      <li>Size - again, based on the configuration</li>
+    </ul>
+
+    <p>The configuration can be updated using a JSON file where all its properties are defined.
+    </p>
+
+    <p><strong>Command+J</strong> is the shortcut to access the plugin.
+    </p>
+
+    <p>You can download it <a href="" target="_blank">here</a> or see the source code on <a href="#" target="_blank">github</a>.
+    </p>
+
+    <p>I just love sketch for its ease, performance, plugins and ability to integrate with various design tools. And they are working on creating proper documentation for developers. They have also created a boilerplate to start with<br>
+      <a href="#" target="_blank">skpm</a> - a CLI/UI based bolierplate for creating a basic sketch plugin.
+    </p>
+
+  </div>
+
+</div>

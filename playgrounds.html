@@ -7,20 +7,21 @@ keywords: github pages, Jekyll, foundation 6
 
 <section role="main" class="grid-x align-center content-container">
   <div class="small-10">
-    <div class="subheading uppercase">Playground</div>
-    <hr>
+    <div class="grid-x align-justify listing-section">
+      <div class="subheading uppercase">Playground</div>
+    </div>
     {% for post in site.posts %}
       {% if post.blog != null %}
       {% else %}
       <div class="grid-x blog-section blog-section-listing">
-        <a href="{{ post.url }}" class="blog-image small-12 medium-4">
+        <a href="{{ post.url }}" class="blog-image small-12 medium-6">
           <img src="{{ post.image-url }}"> </a>
-        <a href="{{ post.url }}">
-          <div class="small-12 medium-8 blog-title-listing-page">
-              <div class="blog-title"> {{ post.title }}</div>
+        <div class="small-12 medium-6">
+          <a href="{{ post.url }}" class="small-12 medium-8 blog-title-listing-page">
+              <div class="blog-title"> {{ post.title }}<span class="inline-small-text">{{ post.time }}</span></div>
               <div class="blog-desc">{{ post.description}}</div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
       {% endif %}
     {% endfor %}

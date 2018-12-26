@@ -47,7 +47,7 @@ keywords: github pages, Jekyll, foundation 6
     <div class="grid-x align-justify listing-section">
       <div class="subheading uppercase">blog</div>
       <div class="midline"></div>
-      <a href="/blogs" class="small-text">12 More</a>
+      <!-- <a href="/blogs" class="small-text">12 More</a> -->
     </div>
     <div class="grid-x grid-margin-x align-justify">
       {% assign blogPosts = site.posts | where: 'blog', 'true' %}
@@ -71,11 +71,11 @@ keywords: github pages, Jekyll, foundation 6
     <div class="grid-x align-justify listing-section">
       <div class="subheading uppercase">Playground</div>
       <div class="midline"></div>
-      <a href="/playgrounds" class="small-text">12 More</a>
+      <!-- <a href="/playgrounds" class="small-text">12 More</a> -->
     </div>
     <div class="grid-x grid-margin-x align-justify">
       {% assign playgroundPosts = site.posts | where: 'playground', 'true' %}
-        {% for post in playgroundPosts limit:2 %}
+        {% for post in playgroundPosts limit:4 %}
         <a class="small-12 medium-6 cell blog-section" href="{{ post.url }}">
           <div class="blog-image small-12 medium-4">
             <img src="{{ post.image-url }}"> </div>

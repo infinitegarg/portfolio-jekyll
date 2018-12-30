@@ -38,7 +38,7 @@
 
     <div class="off-canvas position-right" data-off-canvas id="offCanvas">
       <div class="vertical menu mtl">
-        {% include nav.html %}
+        {% include nav_inside.html %}
       </div>
       <button class="close-button" aria-label="Close menu" type="button" data-close>
         <i class="fas fa-times fa-xs"></i>
@@ -51,7 +51,7 @@
 
         <div class="title-bar-right mts">
           <div class="show-for-medium menu align-right simple quiet">
-            {% include nav.html %}
+            {% include nav_inside.html %}
           </div>
           <ul class="hide-for-medium menu align-right simple">
             <li><button class="secondary button" data-toggle="offCanvas" type="button"><i aria-hidden="true" class="fas fa-bars"></i> MENU</button></li>
@@ -75,7 +75,8 @@
             {% if page.previous.url %}
             <a class="small-12 medium-6 cell blog-section" href="{{ page.previous.url }}">
               <div class="blog-image small-12 medium-4">
-                <img src="{{ page.previous.image-url }}"> </div>
+                <!-- add ../images since the plog is posted in a directory  -->
+                <img src="../{{ page.previous.image-url }}"> </div>
               <div class="blog-heading">
                 <div class="blog-title">{{ page.previous.title }}<span class="inline-small-text">{{ page.previous.time }}</span></div>
                 <div class="blog-desc">{{ page.previous.description}}</div>
@@ -86,7 +87,8 @@
             {% if page.next.url %}
             <a class="small-12 medium-6 cell blog-section" href="{{ page.next.url }}">
               <div class="blog-image small-12 medium-4">
-                <img src="{{ page.next.image-url }}"> </div>
+                <!-- add ../images since the plog is posted in a directory  -->
+                <img src="../{{ page.next.image-url }}"> </div>
               <div class="blog-heading">
                 <div class="blog-title">{{ page.next.title }}<span class="inline-small-text">{{ page.next.time }}</span></div>
                 <div class="blog-desc">{{ page.next.description}}</div>
@@ -108,7 +110,7 @@
     <script>window.jQuery || document.write('<script src="../bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
     <script src="../bower_components/what-input/dist/what-input.min.js"></script>
     <script src="../bower_components/foundation-sites/dist/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 
     <!-- Google Analytics, change UA code below -->
     <script>

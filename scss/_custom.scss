@@ -551,3 +551,29 @@ a.blog-section:hover {
 // 	padding-left: 0;
 // 	padding-right: 0;
 // }
+
+.hamburger {
+	background-color: transparent !important;
+}
+
+@media screen and (max-width: 40em) {
+	.title-bar {
+		padding: 1rem 1rem 0;
+	}
+
+}
+
+
+.close-button {
+	top: 1.8rem;
+	font-size: 1.8em;
+}
+
+.menu{
+	&.vertical {
+    padding-top: 1.5rem;
+		li {
+			padding-left: 1rem;
+		}
+	}
+}

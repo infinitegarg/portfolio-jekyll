@@ -205,12 +205,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-desc {
-  padding: 1rem 0;
-	letter-spacing: -.02em;
-  font-size: 20px;
-  font-weight: 300;
+	padding: .5rem 0;
+letter-spacing: -.02em;
+font-size: 18px;
+font-weight: 300;
   a {
-    font-size: 20px;
+    font-size: 18px;
     padding: 0;
 
   }
@@ -502,3 +502,40 @@ a.blog-section:hover {
 .video {
 	margin-bottom: 1rem;
 }
+
+.flex-column {
+	height: calc(100vh - 98px);
+	display: flex;
+	flex-direction: column;
+
+	.grow {
+		flex: 1;
+	}
+}
+
+.full-width {
+	width: 100%;
+}
+
+.contact-section {
+	padding-top: 2rem;
+}
+.email-section {
+	font-size: 1.5rem;
+	@media screen and (min-width: 40em){
+		font-size: 2rem;
+	}
+	margin-top: 1rem;
+	margin-bottom: .2rem;
+	display: block;
+}
+
+.no-padding-horizontal {
+	padding-left: 0;
+	padding-right: 0;
+}
+//
+// .title-bar {
+// 	padding-left: 0;
+// 	padding-right: 0;
+// }

@@ -16,4 +16,5 @@ year : 2018
 markdown : kramdown
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
-permalink: pretty
+permalink: /:title/
+# relative_permalinks: false

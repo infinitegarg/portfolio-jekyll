@@ -54,47 +54,52 @@
             {% include nav_inside.html %}
           </div>
           <ul class="hide-for-medium menu align-right simple">
-            <li><button class="secondary button" data-toggle="offCanvas" type="button"><i aria-hidden="true" class="fas fa-bars"></i> MENU</button></li>
+            <li><button class="secondary button" data-toggle="offCanvas" type="button"><i aria-hidden="true" class="fas fa-bars"></i></button></li>
           </ul>
         </div>
       </div>
 
     <div class="grid-container content-container">
       <div class="grid-x align-center">
-        <div class="cell small-10 medium-10 subheading uppercase breadcrumb">
+        <!-- <div class="cell small-10 medium-10 subheading uppercase breadcrumb">
           <a href="blog"> &lt; blog</a>
-        </div>
+        </div> -->
       </div>
       {{ content }}
 
     </div>
     <div class="grid-container large">
-      <div class="page-navigation-header"> Up Next </div>
-      <div class="page-navigation grid-x grid-margin-x align-justify">
-            {% if page.previous.url %}
-            <a class="small-12 medium-6 cell blog-section" href="{{ page.previous.url }}">
-              <div class="blog-image small-12 medium-4">
-                <!-- add ../images since the plog is posted in a directory  -->
-                <img src="../{{ page.previous.image-url }}"> </div>
-              <div class="blog-heading">
-                <div class="blog-title">{{ page.previous.title }}<span class="inline-small-text">{{ page.previous.time }}</span></div>
-                <div class="blog-desc">{{ page.previous.description}}</div>
-                <div class="category">{{ page.previous.categories}}</div>
-              </div>
-            </a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="small-12 medium-6 cell blog-section" href="{{ page.next.url }}">
-              <div class="blog-image small-12 medium-4">
-                 <!-- add ../images since the plog is posted in a directory  -->
-                <img src="../{{ page.next.image-url }}"> </div>
-              <div class="blog-heading">
-                <div class="blog-title">{{ page.next.title }}<span class="inline-small-text">{{ page.next.time }}</span></div>
-                <div class="blog-desc">{{ page.next.description}}</div>
-                <div class="category">{{ page.next.categories}}</div>
-              </div>
-            </a>
-            {% endif %}
+      <div class="grid-x align-center">
+        <div class="small-10">
+
+          <div class="page-navigation-header"> Up Next </div>
+          <div class="page-navigation grid-x grid-margin-x align-justify">
+                {% if page.previous.url %}
+                <a class="small-12 medium-6 cell blog-section" href="{{ page.previous.url }}">
+                  <div class="blog-image small-12 medium-4">
+                    <!-- add ../images since the plog is posted in a directory  -->
+                    <img src="../{{ page.previous.image-url }}"> </div>
+                  <div class="blog-heading">
+                    <div class="blog-title">{{ page.previous.title }}<span class="inline-small-text">{{ page.previous.time }}</span></div>
+                    <div class="blog-desc">{{ page.previous.description}}</div>
+                    <div class="category">{{ page.previous.categories}}</div>
+                  </div>
+                </a>
+                {% endif %}
+                {% if page.next.url %}
+                <a class="small-12 medium-6 cell blog-section" href="{{ page.next.url }}">
+                  <div class="blog-image small-12 medium-4">
+                     <!-- add ../images since the plog is posted in a directory  -->
+                    <img src="../{{ page.next.image-url }}"> </div>
+                  <div class="blog-heading">
+                    <div class="blog-title">{{ page.next.title }}<span class="inline-small-text">{{ page.next.time }}</span></div>
+                    <div class="blog-desc">{{ page.next.description}}</div>
+                    <div class="category">{{ page.next.categories}}</div>
+                  </div>
+                </a>
+                {% endif %}
+            </div>
+          </div>
         </div>
       </div>
       <div class="grid-container fluid">

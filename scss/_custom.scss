@@ -230,6 +230,13 @@ font-weight: 300;
   font-size: 20px;
   // font-family: FreightBigProBook !important;
   font-family: 'Lora', serif !important;
+
+	a {
+		text-decoration: underline;
+		-webkit-text-underline-position: under;
+		  -ms-text-underline-position: below;
+		  text-underline-position: under;
+	}
 }
 
 .post-title {

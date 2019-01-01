@@ -14,3 +14,20 @@ time: "1 min"
 <div class="cover-art">
   <img src="../images/ios-shadow.png">
 </div>
+<div class="grid-x align-center">
+  <div class="cell small-10 medium-10 post-content">
+    <div class="post-title">{{ page.title }}</div>
+    <br>
+    <p>
+      iOS 11 introduced this pretty shadow effect using blur. I wanted to recreate this for web using CSS.
+    </p>
+    <p>
+      This particular effect has two layers of images, the background one having blur effect.<br>
+      However, on researching I found this property <span class="code">backdrop-filter</span> but unfortunately it is not supported by most web browsers. Only Edge and Safari supports it as of now. <a href="https://caniuse.com/#search=backdrop-filter">caniuse</a>
+      </p>
+
+      <p>
+        You can find the original CSS effect on codepen <a href="https://codepen.io/infinitegarg/pen/dprbmL">here</a>
+        </p>
+  </div>
+</div>

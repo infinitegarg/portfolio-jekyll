@@ -584,3 +584,14 @@ a.blog-section:hover {
 		}
 	}
 }
+
+.copyright {
+	a {
+		&:hover {
+			text-decoration: none;
+			transform: translateY(-2px);
+			transition: .2s ease-out;
+		}
+	transition: .2s ease-in;
+	}
+}

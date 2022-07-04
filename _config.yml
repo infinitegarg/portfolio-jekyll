@@ -17,6 +17,3 @@ markdown : kramdown
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 permalink: /:title
-
-baseurl: /portfolio
-url: http://infinitegarg.github.io
